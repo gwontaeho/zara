@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -18,12 +21,16 @@ export const Top = styled.div`
   position: relative;
 `;
 
+export const Bottom = styled.div`
+  width: 100%;
+  height: 50%;
+`;
+
 export const TopSlider = styled.div`
-  padding-top: 200px;
-  height: calc(100% - 200px);
   width: fit-content;
   display: flex;
   position: absolute;
+  height: 100%;
   top: 0;
   left: 0;
   transition: 0.8s;
@@ -31,6 +38,9 @@ export const TopSlider = styled.div`
   > div {
     width: 100vw;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: 100%;
@@ -64,11 +74,6 @@ export const NextButton = styled.div`
   top: 50%;
   right: 50px;
   cursor: pointer;
-`;
-
-export const Bottom = styled.div`
-  width: 100%;
-  height: 50%;
 `;
 
 export const Buttons = styled.div`

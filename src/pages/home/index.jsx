@@ -92,7 +92,7 @@ const Home = () => {
             </NextButton>
           )}
         </Top>
-        <Bottom></Bottom>
+        <Bottom>asdsad</Bottom>
       </Slider>
       <Buttons>
         <div>

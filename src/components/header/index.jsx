@@ -1,9 +1,25 @@
+import { useCallback } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import { openMenu } from "../../redux/menu/actions";
 import { Container, Button, Logo } from "./styles";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const onClickOpenMenu = useCallback(() => {
+    dispatch(openMenu());
+  }, []);
+
+  const onClickNavigateHome = useCallback(() => {
+    navigate("/");
+  }, []);
+
   return (
     <Container>
-      <Button>
+      <Button onClick={onClickOpenMenu}>
         <svg viewBox="0 0 18 14">
           <path
             fillRule="evenodd"
@@ -12,7 +28,7 @@ const Header = () => {
           />
         </svg>
       </Button>
-      <Logo>
+      <Logo onClick={onClickNavigateHome}>
         <svg viewBox="0 0 132 55">
           <path
             fillRule="evenodd"

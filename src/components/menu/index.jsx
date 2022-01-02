@@ -1,26 +1,64 @@
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
 import { Container, Button, Nav } from "./styles";
+import { setNav, closeMenu } from "../../redux/menu/actions";
 
 const Menu = () => {
-  const nav = ["WOMAN", "MAN", "KIDS", "BEAUTY", "SHOES & BAGS"].map(
-    (category) => {
-      return (
-        <div key={category}>
-          <div>{category}</div>
-          <div>
-            <div>패딩</div>
-            <div>코트 | 자켓</div>
-            <div>니트 | 가디건</div>
-            <div>티셔츠 | 맨투맨</div>
-            <div>팬츠</div>
-          </div>
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const menu = useSelector((state) => state.menu);
+
+  const onClickSetNav = useCallback((nav) => {
+    dispatch(setNav(nav));
+  }, []);
+
+  const onClickCloseMenu = useCallback(() => {
+    dispatch(closeMenu());
+  }, []);
+
+  const onClickNavigateCategory = useCallback(() => {
+    dispatch(closeMenu());
+    navigate("category");
+  }, []);
+
+  const navs = ["WOMAN", "MAN", "KIDS", "BEAUTY", "SHOES & BAGS"].map((nav) => {
+    const className = menu.nav === nav ? " current" : " others";
+
+    return (
+      <div key={nav}>
+        <div
+          onClick={() => onClickSetNav(nav)}
+          className={`nav${menu.nav ? className : ""}`}
+        >
+          {nav}
         </div>
-      );
-    }
-  );
+        {menu.nav === nav && (
+          <div className="category">
+            {[
+              "패딩",
+              "코트 | 자켓",
+              "니트 | 가디건",
+              "티셔츠 | 맨투맨",
+              "팬츠",
+            ].map((category) => {
+              return (
+                <div key={category} onClick={onClickNavigateCategory}>
+                  {category}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  });
 
   return (
-    <Container>
-      <Button>
+    <Container className={menu.open ? "open" : "close"}>
+      <Button onClick={onClickCloseMenu}>
         <svg viewBox="0 0 24 24">
           <path
             fillRule="evenodd"
@@ -34,7 +72,7 @@ const Menu = () => {
           />
         </svg>
       </Button>
-      <Nav>{nav}</Nav>
+      <Nav>{navs}</Nav>
     </Container>
   );
 };
