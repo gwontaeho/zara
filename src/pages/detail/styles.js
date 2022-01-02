@@ -2,6 +2,10 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   width: 100vw;
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+    overflow: hidden;
+  }
 `;
 
 export const Main = styled.div`
@@ -11,14 +15,18 @@ export const Main = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   justify-items: center;
-  align-items: end;
-`;
 
-export const Info = styled.div`
-  width: 50%;
-  height: 50%;
-  overflow: hidden;
-  border: 1px solid black;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    padding-top: 100px;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Image = styled.div`
@@ -27,6 +35,12 @@ export const Image = styled.div`
   display: flex;
   :hover .thumbnails {
     opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 50px;
+    width: calc(100% - 100px);
+    height: calc(100% - 200px);
   }
 `;
 
@@ -40,7 +54,7 @@ export const Slider = styled.div`
   }
 
   div {
-    width: fit-contents;
+    width: 100%;
     height: fit-contents;
     display: flex;
     flex-direction: column;
@@ -48,8 +62,17 @@ export const Slider = styled.div`
   }
 
   img {
+    width: 100%;
     height: calc(100vh - 200px);
-    object-fit: contains;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 50px);
+    height: 100%;
+    img {
+      object-fit: cover;
+    }
   }
 `;
 export const Progress = styled.div`
@@ -67,7 +90,6 @@ export const Progress = styled.div`
 
   .progress {
     position: absolute;
-    height: 20%;
     transition: 0.5s;
     width: 2px;
     background-color: black;
@@ -92,11 +114,19 @@ export const Thumbnails = styled.div`
     object-fit: contains;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Side = styled.div`
   width: 50%;
-  border: 1px solid black;
+  align-self: end;
+
+  > * {
+    margin: 10px 0;
+  }
 
   .name {
     font-size: 1.5rem;
@@ -128,9 +158,104 @@ export const Side = styled.div`
   }
 
   .size {
+    cursor: pointer;
+    padding: 5px;
     :hover {
       background-color: lightgray;
     }
+  }
+
+  .size-guide {
+    display: flex;
+    justify-content: space-between;
+    > div {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .actions {
+    > div {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const SideMin = styled.div`
+  padding: 10px 30px;
+  width: calc(100% - 60px);
+  height: 180px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .colors {
+    display: flex;
+    align-items: center;
+  }
+
+  .color {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    > div {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+  }
+
+  .cart {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
   }
 `;
 
@@ -156,8 +281,12 @@ export const Secondary = styled.div`
       margin-right: 20px;
     }
     .cart {
-      width: fit-content;
-      padding: 5px 50px;
+      width: 100%;
+      max-width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
       margin-top: 10px;
       border: 1px solid black;
       cursor: pointer;

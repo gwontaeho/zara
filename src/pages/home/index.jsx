@@ -14,9 +14,13 @@ import {
   Buttons,
 } from "./styles";
 
+import Footer from "../../components/footer_home";
+
 const Home = () => {
   const sliderRef = useRef();
   const topSliderRef = useRef();
+
+  const screenTitle = ["BEAUTY", "MAN", "WOMAN", "KIDS"];
 
   const [screen, setScreen] = useState(0);
   const [topScreen, setTopScreen] = useState(0);
@@ -78,12 +82,12 @@ const Home = () => {
                   <path d="M 12.647 12.661 L 0.824 0.838 l 0.354 -0.354 l 12.176 12.177 L 1.178 24.838 l -0.354 -0.354 l 11.823 -11.823 Z" />
                 </svg>
               </div>
-              <div>MAN</div>
+              <div>{screenTitle[topScreen - 1]}</div>
             </PrevButton>
           )}
           {topScreen !== 3 && (
             <NextButton onClick={onClickNext}>
-              <div>WOMAN</div>
+              <div>{screenTitle[topScreen + 1]}</div>
               <div className="icon">
                 <svg viewBox="0 0 14 25">
                   <path d="M 12.647 12.661 L 0.824 0.838 l 0.354 -0.354 l 12.176 12.177 L 1.178 24.838 l -0.354 -0.354 l 11.823 -11.823 Z" />
@@ -92,7 +96,9 @@ const Home = () => {
             </NextButton>
           )}
         </Top>
-        <Bottom>asdsad</Bottom>
+        <Bottom>
+          <Footer />
+        </Bottom>
       </Slider>
       <Buttons>
         <div>

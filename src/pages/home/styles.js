@@ -19,11 +19,13 @@ export const Top = styled.div`
   width: 100%;
   height: 50%;
   position: relative;
+  overflow: hidden;
 `;
 
 export const Bottom = styled.div`
   width: 100%;
   height: 50%;
+  overflow: hidden;
 `;
 
 export const TopSlider = styled.div`
@@ -45,7 +47,7 @@ export const TopSlider = styled.div`
     img {
       width: 100%;
       height: 100%;
-      max-height: 500px;
+      max-height: 600px;
       object-fit: contain;
     }
   }

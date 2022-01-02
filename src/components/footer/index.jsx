@@ -5,7 +5,7 @@ const Footer = () => {
     <Container>
       <Marketing>
         <div>뉴스레터에 가입하세요</div>
-        <input />
+        <input placeholder="여기에 이메일을 입력하세요" />
         <div className="social">
           <ul>
             <li>

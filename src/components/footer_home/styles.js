@@ -2,8 +2,10 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 `;
 
@@ -11,9 +13,16 @@ export const Marketing = styled.div`
   width: 70%;
   margin-top: 200px;
 
+  .title {
+    font-size: 1.2rem;
+  }
+
   input {
     border: 0;
+    height: 50px;
+    width: 300px;
     border-bottom: 1px solid lightgray;
+    outline: none;
   }
 
   .social {
@@ -30,28 +39,9 @@ export const Marketing = styled.div`
   }
 `;
 
-export const Sitemap = styled.div`
-  width: 70%;
-  display: flex;
-  padding: 200px 0 100px;
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-right: 50px;
-  }
-  .title {
-    font-size: 1.1rem;
-  }
-`;
-
-export const Nav = styled.div`
-  width: 70%;
-  padding: 100px 0 100px;
-  border-top: 1px solid lightgray;
-`;
-
 export const Legal = styled.div`
+  margin-top: 20vh;
+  border-top: 1px solid lightgray;
   width: 70%;
   padding-bottom: 100px;
 `;

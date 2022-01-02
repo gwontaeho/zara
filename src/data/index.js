@@ -149,13 +149,34 @@ export const product = {
     },
   ],
   sizes: [
-    "XXS (KR 33)",
-    "XS (KR 44)",
-    "S (KR 55)",
-    "M (KR 66)",
-    "L (KR 77)",
-    "XL (KR 88)",
-    "XXL (KR 99)",
+    {
+      id: 0,
+      size: "XXS (KR 33)",
+    },
+    {
+      id: 1,
+      size: "XS (KR 44)",
+    },
+    {
+      id: 2,
+      size: "S (KR 55)",
+    },
+    {
+      id: 3,
+      size: "M (KR 66)",
+    },
+    {
+      id: 4,
+      size: "L (KR 77)",
+    },
+    {
+      id: 5,
+      size: "XL (KR 88)",
+    },
+    {
+      id: 6,
+      size: "XXL (KR 99)",
+    },
   ],
   looks: [
     {
