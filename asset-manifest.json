@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zara/static/css/main.70f74325.css",
-    "main.js": "/zara/static/js/main.14d4ecb0.js",
+    "main.js": "/zara/static/js/main.c74dd034.js",
     "static/js/787.736b90c3.chunk.js": "/zara/static/js/787.736b90c3.chunk.js",
     "static/media/16.jpg": "/zara/static/media/16.d272b5b399727cfdc399.jpg",
     "static/media/7.webp": "/zara/static/media/7.69ac8197a9aee3ac7e0e.webp",
@@ -32,11 +32,11 @@
     "static/media/look1.webp": "/zara/static/media/look1.6daccfd03c002686e74b.webp",
     "index.html": "/zara/index.html",
     "main.70f74325.css.map": "/zara/static/css/main.70f74325.css.map",
-    "main.14d4ecb0.js.map": "/zara/static/js/main.14d4ecb0.js.map",
+    "main.c74dd034.js.map": "/zara/static/js/main.c74dd034.js.map",
     "787.736b90c3.chunk.js.map": "/zara/static/js/787.736b90c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70f74325.css",
-    "static/js/main.14d4ecb0.js"
+    "static/js/main.c74dd034.js"
   ]
 }
