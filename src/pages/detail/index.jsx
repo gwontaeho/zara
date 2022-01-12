@@ -88,7 +88,6 @@ const Detail = () => {
           <Thumbnails className="thumbnails">
             <ul>
               {product.colors[selectedColor].images.map((image, i) => {
-                console.log(i);
                 return (
                   <li key={i}>
                     <img src={image} alt="product" onClick={() => onClick(i)} />
