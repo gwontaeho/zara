@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.70f74325.css",
+    "main.js": "/static/js/main.7322b8d6.js",
+    "static/js/787.736b90c3.chunk.js": "/static/js/787.736b90c3.chunk.js",
+    "static/media/16.jpg": "/static/media/16.d272b5b399727cfdc399.jpg",
+    "static/media/7.webp": "/static/media/7.69ac8197a9aee3ac7e0e.webp",
+    "static/media/4.webp": "/static/media/4.de27ab54d3be7b01ccf8.webp",
+    "static/media/3.webp": "/static/media/3.6cfd09c3fe955d885bdb.webp",
+    "static/media/14.jpg": "/static/media/14.9829a35e8c0d0b421bf1.jpg",
+    "static/media/15.jpg": "/static/media/15.e5e2bc03d85781930c11.jpg",
+    "static/media/suggestion1.webp": "/static/media/suggestion1.222a8df01e65be09b044.webp",
+    "static/media/2.webp": "/static/media/2.c09f3af6087a25b2c7db.webp",
+    "static/media/12.webp": "/static/media/12.5adc872437d89b1c2e20.webp",
+    "static/media/5.webp": "/static/media/5.a77db40ebc71968c0556.webp",
+    "static/media/6.webp": "/static/media/6.4a0878b4de92fe3a6e30.webp",
+    "static/media/13.webp": "/static/media/13.ab58d4f75256d7cd1ba8.webp",
+    "static/media/2.jpg": "/static/media/2.acd59de33b86319b281a.jpg",
+    "static/media/10.webp": "/static/media/10.7bc2ef0b48dad9ab4210.webp",
+    "static/media/1.webp": "/static/media/1.6a4b5bccfed199eabe56.webp",
+    "static/media/suggestion2.webp": "/static/media/suggestion2.cb8d8dc3ce980fa94841.webp",
+    "static/media/11.webp": "/static/media/11.b7732dfed7d3cb02dab2.webp",
+    "static/media/9.webp": "/static/media/9.3818dc8b8d2c8e6b12f2.webp",
+    "static/media/CARE_FOR_WATER_0.jpg": "/static/media/CARE_FOR_WATER_0.689b0d208b130ff29182.jpg",
+    "static/media/woman.jpg": "/static/media/woman.25473f44151f65c7a867.jpg",
+    "static/media/first.jpg": "/static/media/first.76d867342533c26c057a.jpg",
+    "static/media/RECYCLED_POLYESTER_0.jpg": "/static/media/RECYCLED_POLYESTER_0.bf7fdce14c3712a2752b.jpg",
+    "static/media/17.webp": "/static/media/17.9f9d3e3cb1d61dd6b621.webp",
+    "static/media/8.webp": "/static/media/8.f6aebe3e3eedcb694a46.webp",
+    "static/media/kids.jpg": "/static/media/kids.700d0d998d2cb8f48cb1.jpg",
+    "static/media/man.jpg": "/static/media/man.50cf1b856a87104373de.jpg",
+    "static/media/look1.webp": "/static/media/look1.6daccfd03c002686e74b.webp",
+    "index.html": "/index.html",
+    "main.70f74325.css.map": "/static/css/main.70f74325.css.map",
+    "main.7322b8d6.js.map": "/static/js/main.7322b8d6.js.map",
+    "787.736b90c3.chunk.js.map": "/static/js/787.736b90c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70f74325.css",
+    "static/js/main.7322b8d6.js"
+  ]
+}
